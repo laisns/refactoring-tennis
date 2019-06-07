@@ -1,0 +1,12 @@
+codigo inicial:
+
+195.7: flog total
+    15.1: flog/method average
+
+   100.7: TennisGame2 total
+   100.7: TennisGame2#score                tennis.rb:72-161
+
+    30.4: TennisGame1 total
+    30.4: TennisGame1#score                tennis.rb:17-52
+
+
