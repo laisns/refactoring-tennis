@@ -1,10 +1,13 @@
-class TennisGame1
+class TennisGame
   def initialize(player1Name, player2Name)
     @player1Name = player1Name
     @player2Name = player2Name
     @p1points = 0
     @p2points = 0
   end
+end
+
+class TennisGame1 < TennisGame
 
   def won_point(playerName)
     if playerName == "player1"
@@ -53,13 +56,7 @@ class TennisGame1
   end
 end
 
-class TennisGame2
-  def initialize(player1Name, player2Name)
-    @player1Name = player1Name
-    @player2Name = player2Name
-    @p1points = 0
-    @p2points = 0
-  end
+class TennisGame2 < TennisGame
 
   def won_point(playerName)
     if playerName == @player1Name
@@ -182,13 +179,7 @@ class TennisGame2
   end
 end
 
-class TennisGame3
-  def initialize(player1Name, player2Name)
-    @p1N = player1Name
-    @p2N = player2Name
-    @p1 = 0
-    @p2 = 0
-  end
+class TennisGame3 < TennisGame
 
   def won_point(n)
     if n == @p1N
@@ -213,3 +204,11 @@ class TennisGame3
     end
   end
 end
+
+###################################################
+# game = TennisGame2.new('player1', 'player2')
+# 3.times do
+#   game.won_point('player2')
+# end
+# puts game.score
+# ########### returns  'Love-Forty' ################
