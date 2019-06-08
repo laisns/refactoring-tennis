@@ -9,4 +9,10 @@ codigo inicial:
     30.4: TennisGame1 total
     30.4: TennisGame1#score                tennis.rb:17-52
 
+refactor#1:
 
+36.7: flog total
+     9.2: flog/method average
+
+    27.2: TennisGame total
+    27.2: TennisGame#score                 tennis.rb:15-27
