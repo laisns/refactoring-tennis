@@ -1,4 +1,6 @@
+require_relative 'score'
 class TennisGame
+  include Score
   attr_reader :p1points, :p2points
 
   def initialize(player1Name, player2Name)
@@ -30,9 +32,11 @@ end
 
 
 ###################################################
-# game = TennisGame.new('player1', 'player2')
-# 3.times do
-#   game.won_point('player2')
-# end
+game = TennisGame.new('player1', 'player2')
+4.times do
+  game.won_point('player2')
+end
 # puts game.score
-# ########### returns  'Love-Forty' ################
+############# returns  'Love-Forty' ###############
+
+game.check(game.p1points, game.p2points)
