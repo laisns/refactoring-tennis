@@ -16,3 +16,13 @@ refactor#1:
 
     27.2: TennisGame total
     27.2: TennisGame#score                 tennis.rb:15-27
+
+refactor#2:
+
+54.8: flog total
+     6.1: flog/method average
+
+    34.1: TennisGame total
+    18.6: TennisGame#score                 tennis.rb:16-23
+     7.8: TennisGame#advantage             tennis.rb:45-47
+     7.6: TennisGame#game_won              tennis.rb:33-35
