@@ -1,30 +1,47 @@
-require_relative 'tennis.rb'
-module Score
-  SCORE = ['Love', 'Fifteen', 'Thirty', 'Forty']
+class Player
+  attr_reader :points, :name
 
-  def check(p1, p2)
-    puts "win for player #{game}" if game_won(p1, p2)
-    puts 'Deuce' if deuce(p1, p2)
-    puts "#{SCORE[p1]} - All " if all(p1, p2)
+  def initialize(name)
+    @name, @points = name, 0
   end
 
-  private
-
-  def game_won(x, y)
-    x >= 4 and x - y > 1 or y >= 4 and y - x > 1
+  def won_point
+    @points += 1
   end
 
-  def deuce(x, y)
-    x == y and x >= 4
+end
+
+class TennisGame
+  def all
+    x == y < 3
   end
 
-  def all(x, y)
-    x == y and x < 4
+  def deuce
+    x == y >= 3
+  end
+
+  def won
+    (x >= 4 || y >=4) and (x - y).abs > 1
+  end
+
+  def advantage
+    x >= 3 and y >= 3 and (x - y).abs > 1
+  end
+
+  def distinct
+    x != y and x < 4 and y < 4
   end
 end
 
-# case check()
-# when 1
-# when 2
-# when 3
-# when 4
+
+
+###################################################
+# player1 = Player.new('john')
+# player2 = Player.new('eric')
+# game = TennisGame.new(player1, player2)
+# 3.times do
+#   player2.won_point
+# end
+# puts game.score(player1.points, player2.points)
+############# returns  'Love-Forty' ###############
+
